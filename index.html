@@ -496,7 +496,36 @@ button.btn-cta { border: none; width: 100%; }
 footer { background: #0a1628; color: #7a9ab8; text-align: center; padding: 28px 20px; font-size: 12px; line-height: 1.9; }
 footer a { color: #0073E6; text-decoration: none; }
 
-@media (max-width: 480px) { .sec { padding: 40px 16px; } }
+@media (max-width: 480px) {
+  .sec { padding: 40px 16px; }
+  
+  /* Melhorar legibilidade geral em mobile */
+  body { font-size: 16px; }
+  
+  /* Aumentar tamanho de fontes pequenas */
+  p { font-size: 15px !important; }
+  
+  /* Mudar cores cinzas para preto */
+  p[style*="color:#555"] { color: #111 !important; }
+  p[style*="color:#888"] { color: #111 !important; }
+  p[style*="color:#999"] { color: #333 !important; }
+  p[style*="color:#aaa"] { color: #444 !important; }
+  
+  /* Listas e itens */
+  li { font-size: 15px !important; }
+  
+  /* Textos com estilos inline pequenos */
+  div[style*="font-size:12px"] { font-size: 14px !important; color: #111 !important; }
+  div[style*="font-size:13px"] { font-size: 15px !important; color: #111 !important; }
+  div[style*="font-size:14px"] { font-size: 16px !important; color: #111 !important; }
+  
+  /* Spans com textos pequenos */
+  span[style*="font-size:12px"] { font-size: 14px !important; }
+  span[style*="font-size:13px"] { font-size: 15px !important; }
+  
+  /* Footer */
+  footer { font-size: 13px; }
+}
 
 @keyframes pulseOrange {
   0%,100% { box-shadow: 0 6px 22px rgba(255,107,0,0.42); transform: scale(1); }
