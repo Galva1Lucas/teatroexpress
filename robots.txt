@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: /sitemap.xml
+
+# Delay between requests (in seconds)
+Crawl-delay: 1
