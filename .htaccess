@@ -14,29 +14,54 @@
   AddOutputFilterByType DEFLATE font/opentype
 </IfModule>
 
-# Browser caching
+# Disable ETags
+<IfModule mod_headers.c>
+  Header unset ETag
+  Header unset Last-Modified
+</IfModule>
+FileETag None
+
+# Browser caching com tempos mais agressivos
 <IfModule mod_expires.c>
   ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  
+  # Imagens - 1 ano
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  
+  # CSS e JS - 1 mês
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType text/html "access plus 1 week"
+  ExpiresByType text/javascript "access plus 1 month"
+  
+  # Fonts - 1 ano
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
   ExpiresByType application/x-font-ttf "access plus 1 year"
-  ExpiresByType font/opentype "access plus 1 year"
+  ExpiresByType application/x-font-opentype "access plus 1 year"
+  
+  # HTML - 1 semana
+  ExpiresByType text/html "access plus 1 week"
+  
+  # JSON, XML - 1 dia
+  ExpiresByType application/json "access plus 1 day"
+  ExpiresByType application/xml "access plus 1 day"
 </IfModule>
 
 # Cache control headers
 <IfModule mod_headers.c>
-  Header set Cache-Control "public, max-age=31536000" ".jpg .jpeg .png .gif .webp .css .js .woff .woff2"
+  Header set Cache-Control "public, max-age=31536000, immutable" ".jpg .jpeg .png .gif .webp .css .js .woff .woff2 .ttf .otf"
   Header set Cache-Control "public, max-age=604800" ".html"
-  Header set Cache-Control "no-cache, no-store, must-revalidate" ".php"
+  Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0" ".php"
 </IfModule>
 
-# Remove ETags
-<IfModule mod_headers.c>
-  Header unset ETag
-</IfModule>
-FileETag None
+# Habilitar CORS para fonts
+<FilesMatch "\.(ttf|otf|eot|woff|woff2)$">
+  Header set Access-Control-Allow-Origin "*"
+</FilesMatch>

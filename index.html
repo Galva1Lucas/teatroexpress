@@ -9,6 +9,7 @@
 <meta property="og:title" content="+200 Dinâmicas de Teatro Prontas">
 <meta property="og:description" content="Dinâmicas de teatro prontas com passo a passo em vídeo para qualquer nível de elenco.">
 <meta property="og:type" content="website">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -556,32 +557,50 @@ footer a { color: #0073E6; text-decoration: none; }
 @media (max-width: 480px) {
   .sec { padding: 40px 16px; }
   
-  /* Melhorar legibilidade geral em mobile */
+  /* Aumentar tamanhos de fonte para mobile */
   body { font-size: 16px; }
+  h1 { font-size: 24px !important; }
+  h2 { font-size: 20px !important; }
+  h3 { font-size: 18px !important; }
+  h4 { font-size: 16px !important; }
+  p { font-size: 16px !important; color: #111 !important; }
   
-  /* Aumentar tamanho de fontes pequenas */
-  p { font-size: 15px !important; }
+  /* Botões maiores */
+  .btn-cta { padding: 20px 28px !important; font-size: 16px !important; }
   
-  /* Mudar cores cinzas para preto */
-  p[style*="color:#555"] { color: #111 !important; }
-  p[style*="color:#888"] { color: #111 !important; }
-  p[style*="color:#999"] { color: #333 !important; }
-  p[style*="color:#aaa"] { color: #444 !important; }
+  /* Textos pequenos aumentados */
+  div[style*="font-size:12px"], 
+  span[style*="font-size:12px"] { font-size: 14px !important; color: #111 !important; }
+  
+  div[style*="font-size:13px"], 
+  span[style*="font-size:13px"] { font-size: 15px !important; color: #111 !important; }
+  
+  div[style*="font-size:14px"], 
+  span[style*="font-size:14px"] { font-size: 16px !important; color: #111 !important; }
   
   /* Listas e itens */
-  li { font-size: 15px !important; }
-  
-  /* Textos com estilos inline pequenos */
-  div[style*="font-size:12px"] { font-size: 14px !important; color: #111 !important; }
-  div[style*="font-size:13px"] { font-size: 15px !important; color: #111 !important; }
-  div[style*="font-size:14px"] { font-size: 16px !important; color: #111 !important; }
-  
-  /* Spans com textos pequenos */
-  span[style*="font-size:12px"] { font-size: 14px !important; }
-  span[style*="font-size:13px"] { font-size: 15px !important; }
+  li { font-size: 16px !important; }
   
   /* Footer */
-  footer { font-size: 13px; }
+  footer { font-size: 14px; }
+  
+  /* Títulos de seção */
+  .sec-title { font-size: 22px !important; }
+  
+  /* Cards e boxes */
+  .recv-item, .ben-card, .bonus-card, .plan-basic { padding: 24px 18px !important; }
+  .recv-item h3, .ben-card h3 { font-size: 18px !important; }
+  .recv-item p, .ben-card p { font-size: 16px !important; }
+  
+  /* FAQ */
+  .faq-q { font-size: 16px !important; padding: 20px 16px !important; }
+  .faq-a { font-size: 15px !important; padding: 0 16px 18px !important; }
+  
+  /* Badges e tags */
+  .badge-exclusivo, .badge-mais-popular { font-size: 14px !important; }
+  
+  /* Topbar */
+  .topbar { font-size: 13px !important; padding: 14px 16px !important; }
 }
 
 @keyframes pulseOrange {
@@ -895,7 +914,7 @@ footer a { color: #0073E6; text-decoration: none; }
     <div style="display:flex;justify-content:center;margin-bottom:16px;">
       <span class="badge-mais-popular"><span class="b-icon">⭐</span> MAIS POPULAR</span>
     </div>
-    <img src="img/arsenal.png" alt="Arsenal do Diretor - Capa do produto com 200 dinâmicas de teatro" style="width:100%;max-width:300px;border-radius:12px;margin-bottom:16px;" loading="lazy">
+    <img src="img/arsenal.png" alt="Arsenal do Diretor - Capa do produto com 200 dinâmicas de teatro" style="width:100%;max-width:300px;border-radius:12px;margin-bottom:16px;" loading="lazy" width="300" height="400">
     <h2>Arsenal do Diretor</h2>
     <div style="font-size:34px;margin:10px 0;">⚔️</div>
     <div class="plan-price-box">
@@ -946,7 +965,7 @@ footer a { color: #0073E6; text-decoration: none; }
 
   <!-- PLANO BÁSICO -->
   <div class="plan-basic">
-    <img src="img/planobasic.png" alt="Plano Básico - Acesso limitado com 200 dinâmicas" style="width:100%;max-width:300px;border-radius:12px;margin-bottom:16px;" loading="lazy">
+    <img src="img/planobasic.png" alt="Plano Básico - Acesso limitado com 200 dinâmicas" style="width:100%;max-width:300px;border-radius:12px;margin-bottom:16px;" loading="lazy" width="300" height="400">
     <h2>Plano Básico</h2>
     <div class="price"><sup>R$</sup>17<span>,90</span></div>
     <div class="note">pagamento único</div>
@@ -984,7 +1003,7 @@ footer a { color: #0073E6; text-decoration: none; }
         <!-- SLIDE 1 (DEPOIMENTO 4) -->
         <div class="dep-slide">
           <div class="dep-img-placeholder">
-            <img src="img/depoimento4.webp" alt="Depoimento de professor sobre dinâmicas de teatro" loading="lazy"
+            <img src="img/depoimento4.webp" alt="Depoimento de professor sobre dinâmicas de teatro" loading="lazy" width="400" height="533"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="dep-img-fallback">
               <span>📸</span>
@@ -997,7 +1016,7 @@ footer a { color: #0073E6; text-decoration: none; }
         <!-- SLIDE 2 (DEPOIMENTO 1) -->
         <div class="dep-slide">
           <div class="dep-img-placeholder">
-            <img src="img/depoimento 1.png" alt="Depoimento de educador sobre o arsenal do diretor" loading="lazy"
+            <img src="img/depoimento 1.png" alt="Depoimento de educador sobre o arsenal do diretor" loading="lazy" width="400" height="533"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="dep-img-fallback">
               <span>📸</span>
@@ -1010,7 +1029,7 @@ footer a { color: #0073E6; text-decoration: none; }
         <!-- SLIDE 3 (DEPOIMENTO 2) -->
         <div class="dep-slide">
           <div class="dep-img-placeholder">
-            <img src="img/depoimento 2.png" alt="Depoimento de professor sobre as dinâmicas teatrais" loading="lazy"
+            <img src="img/depoimento 2.png" alt="Depoimento de professor sobre as dinâmicas teatrais" loading="lazy" width="400" height="533"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="dep-img-fallback">
               <span>📸</span>
