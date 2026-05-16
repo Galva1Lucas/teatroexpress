@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>+200 Dinâmicas de Teatro Prontas | Arsenal do Diretor</title>
-<meta name="description" content="Acesse +200 dinâmicas de teatro prontas para aumentar engajamento em aulas e ensaios. Material com passo a passo em vídeo. 7 dias de garantia!">
+<meta name="description" content="Acesse +200 dinâmicas de teatro prontas para aumentar engajamento em aulas e ensaios. Material com passo a passo detalhado. 7 dias de garantia!">
 <meta name="theme-color" content="#0073E6">
 <meta property="og:title" content="+200 Dinâmicas de Teatro Prontas">
-<meta property="og:description" content="Dinâmicas de teatro prontas com passo a passo em vídeo para qualquer nível de elenco.">
+<meta property="og:description" content="Dinâmicas de teatro prontas com passo a passo detalhado para qualquer nível de elenco.">
 <meta property="og:type" content="website">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap" as="style">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +30,7 @@
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Arsenal do Diretor - 200 Dinâmicas de Teatro",
-  "description": "Acesse +200 dinâmicas de teatro prontas com passo a passo em vídeo para aumentar engajamento em aulas e ensaios",
+  "description": "Acesse +200 dinâmicas de teatro prontas com passo a passo detalhado para aumentar engajamento em aulas e ensaios",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
@@ -340,6 +340,54 @@ footer a { color: #0073E6; text-decoration: none; }
 .dep-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
 .dep-dot { width: 9px; height: 9px; border-radius: 50%; background: #c8d8ee; cursor: pointer; transition: background .2s, width .2s; border: none; padding: 0; display: inline-block; }
 .dep-dot.active { background: #0073E6; width: 22px; border-radius: 5px; }
+/* ZOOM PRIMEIRA IMAGEM */
+.zoomable-img{
+  cursor:pointer;
+  transition:transform .2s ease;
+}
+
+.zoomable-img:hover{
+  transform:scale(1.02);
+}
+
+.img-zoom-modal{
+  display:none;
+  position:fixed;
+  z-index:999999;
+  inset:0;
+  background:rgba(0,0,0,0.88);
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  animation:fadeZoom .2s ease;
+}
+
+.img-zoom-content{
+  max-width:95%;
+  max-height:95vh;
+  border-radius:16px;
+  object-fit:contain;
+}
+
+.img-zoom-close{
+  position:absolute;
+  top:20px;
+  right:24px;
+  color:#fff;
+  font-size:42px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+@keyframes fadeZoom{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -441,8 +489,8 @@ footer a { color: #0073E6; text-decoration: none; }
     <div class="step-connector"></div>
     <div class="how-step">
       <div class="step-icon">🖥️</div>
-      <h4>Você assiste e aprende</h4>
-      <p>Entende a lógica do jogo, o tempo de execução e como guiar os alunos.</p>
+      <h4>Você estuda e se prepara</h4>
+      <p>Entende a lógica do jogo, o passo a passo completo e como guiar os alunos.</p>
     </div>
     <div class="step-connector"></div>
     <div class="how-step">
@@ -564,7 +612,7 @@ footer a { color: #0073E6; text-decoration: none; }
     </div>
     <ul class="plan-feats">
       <li>200 Dinâmicas Criativas de Teatro</li>
-      <li>200 Dinâmicas com passo a passo em vídeo</li>
+      <li>200 Dinâmicas com passo a passo detalhado</li>
       <li>Planejamento completo do iniciante ao avançado</li>
       <li>Dinâmicas separadas por objetivo e nível</li>
       <li>30 Dinâmicas de construção de personagem</li>
@@ -601,7 +649,7 @@ footer a { color: #0073E6; text-decoration: none; }
     <div class="limit-note">Acesso limitado — sem bônus</div>
     <ul>
       <li>200 Dinâmicas Criativas de Teatro</li>
-      <li>10 Dinâmicas com passo a passo em vídeo</li>
+      <li>10 Dinâmicas com passo a passo detalhado</li>
       <li>Acesso digital e vitalício</li>
       <li>Garantia de 7 dias</li>
     </ul>
@@ -631,7 +679,7 @@ footer a { color: #0073E6; text-decoration: none; }
 
         <div class="dep-slide">
           <div class="dep-img-placeholder">
-            <img src="img/depoimento4.webp" alt="Depoimento de professor sobre dinâmicas de teatro" loading="lazy" width="400" height="533"
+            <img src="img/depoimento4.webp" class="zoomable-img" alt="Depoimento de professor sobre dinâmicas de teatro" loading="lazy" width="400" height="533"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="dep-img-fallback"><span>📸</span><p>Depoimento 4</p><small>img/depoimento4.webp</small></div>
           </div>
@@ -791,7 +839,7 @@ footer a { color: #0073E6; text-decoration: none; }
 
       <ul style="list-style:none;margin-bottom:20px;">
         <li style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #eef3ee;font-size:13px;font-weight:700;color:#111;"><span style="color:#37C86A;font-size:16px;flex-shrink:0;">✓</span> 200 DINÂMICAS CRIATIVAS DE TEATRO!</li>
-        <li style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #eef3ee;font-size:13px;font-weight:700;color:#111;"><span style="color:#37C86A;font-size:16px;flex-shrink:0;">✓</span> 200 DINÂMICAS COM PASSO A PASSO EM VÍDEO!</li>
+        <li style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #eef3ee;font-size:13px;font-weight:700;color:#111;"><span style="color:#37C86A;font-size:16px;flex-shrink:0;">✓</span> 200 DINÂMICAS COM PASSO A PASSO DETALHADO!</li>
         <li style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #eef3ee;font-size:13px;font-weight:700;color:#111;"><span style="color:#37C86A;font-size:16px;flex-shrink:0;">✓</span> PLANEJAMENTO COMPLETO DO INICIANTE AO AVANÇADO!</li>
         <li style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #eef3ee;font-size:13px;font-weight:700;color:#111;"><span style="color:#37C86A;font-size:16px;flex-shrink:0;">✓</span> DINÂMICAS SEPARADAS POR OBJETIVO E NÍVEL!</li>
         <li style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #eef3ee;font-size:13px;font-weight:700;color:#111;"><span style="color:#37C86A;font-size:16px;flex-shrink:0;">✓</span> 30 DINÂMICAS DE CONSTRUÇÃO DE PERSONAGEM!</li>
@@ -908,8 +956,6 @@ function depSlide(dir){
   }, {passive:true});
 })();
 
-// Autoplay carrossel a cada 5s
-setInterval(function(){ depSlide(1); }, 5000);
 
 // ── FAQ ────────────────────────────────────────────────
 document.querySelectorAll('.faq-item').forEach(function(item){
@@ -928,6 +974,47 @@ document.querySelectorAll('a[href="#planos"]').forEach(function(a){
     document.getElementById('planos').scrollIntoView({ behavior: 'smooth' });
   });
 });
+// ZOOM PRIMEIRA IMAGEM
+const zoomImg = document.querySelector('.zoomable-img');
+const zoomModal = document.getElementById('imgZoomModal');
+const zoomContent = document.getElementById('imgZoomContent');
+const zoomClose = document.querySelector('.img-zoom-close');
+
+if(zoomImg && zoomModal && zoomContent){
+  zoomImg.addEventListener('click', function(){
+    zoomModal.style.display = 'flex';
+    zoomContent.src = this.src;
+    document.body.style.overflow = 'hidden';
+  });
+}
+
+function closeZoom(){
+  zoomModal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+if(zoomClose){
+  zoomClose.addEventListener('click', closeZoom);
+}
+
+if(zoomModal){
+  zoomModal.addEventListener('click', function(e){
+    if(e.target === zoomModal){
+      closeZoom();
+    }
+  });
+}
+
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){
+    closeZoom();
+  }
+});
 </script>
+<!-- ZOOM IMG -->
+<div id="imgZoomModal" class="img-zoom-modal">
+  <span class="img-zoom-close">&times;</span>
+  <img id="imgZoomContent" class="img-zoom-content">
+</div>
 </body>
 </html>
